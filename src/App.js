@@ -6,6 +6,10 @@ import standOutImage from './assets/img/mobile/image-stand-out.jpg';
 import photographyImage from './assets/img/mobile/image-photography.jpg';
 import graphicDesignImage from './assets/img/mobile/image-graphic-design.jpg';
 import TextImage from './components/TextImage';
+import Testimonals from './components/Testimonals';
+import emilyImage from './assets/img/image-emily.jpg';
+import ImageGallery from './components/ImageGallery';
+import Footer from './components/Footer';
 
 const articles = [
   {
@@ -37,17 +41,41 @@ const imageArticles = [
   },
 ];
 
+const testimonals = [
+  {
+    name: 'Emily R.',
+    role: 'Marketing Director',
+    text: 'We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.',
+    imgUrl: emilyImage,
+  },
+  {
+    name: 'Emily R.',
+    role: 'Marketing Director',
+    text: 'We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.',
+    imgUrl: emilyImage,
+  },
+  {
+    name: 'Emily R.',
+    role: 'Marketing Director',
+    text: 'We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.',
+    imgUrl: emilyImage,
+  },
+];
+
 function App() {
   return (
     <div className="App">
       <GlobalStyle />
       <Header />
       {articles.map((article) => (
-        <Article {...article} />
+        <Article {...article} key={article.headline} />
       ))}
       {imageArticles.map((article) => (
-        <TextImage {...article} />
+        <TextImage {...article} key={article.headline} />
       ))}
+      <Testimonals testimonals={testimonals} />
+      <ImageGallery />
+      <Footer />
     </div>
   );
 }

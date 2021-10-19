@@ -7,7 +7,7 @@ export default function Article({ headline, text, imgUrl, accentColor }) {
       <div className="article-content">
         <h2>{headline}</h2>
         <p>{text}</p>
-        <a href="/" style={{ borderBottom: `1px solid ${accentColor}` }}>
+        <a href="/" style={{ borderBottom: `3px solid ${accentColor}` }}>
           LEARN MORE
         </a>
       </div>
